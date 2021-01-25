@@ -33,26 +33,25 @@ namespace bot
                 {
                     ChallengerArray[i] = new Hokemon();
                 }
+
+                newBattleObject.theBattle(playerHoke, ChallengerArray[rnd.Next(0, ChallengerArray.Length)]);
+
+                playerHoke.get_details();
+
+                Console.WriteLine("Do you want another battle? (y/n)");
+                result = Console.ReadLine();
+                if ((result.ToLower())[0] == 'n')
+                {
+                    repeatGame = false;
+                }
+
+                newBattleObject.requestAChallenger(hoke03);
+
+                newBattleObject.theBattle(hoke03, hoke04);
+
             }
 
-            newBattleObject.theBattle(playerHoke, ChallengerArray[rnd.Next(0, ChallengerArray.Length)]);
 
-            playerHoke.get_details();
-
-            Console.WriteLine("Do you want another battle? (y/n)");
-            result = Console.ReadLine();
-            if ((result.ToLower())[0] == 'n')
-            {
-                repeatGame = false;
-            }
-
-            
-            Battle_Arena newBattleObject = new Battle_Arena();
-
-            newBattleObject.requestAChallenger(hoke03); 
-
-            newBattleObject.theBattle(hoke03, hoke04);
-            
         }
     }
 }
