@@ -16,14 +16,8 @@ namespace bot
 
             Console.WriteLine("Welcome to bot battle arena");
 
-            
-            Hokemon hoke03 = new Hokemon();
-
-            iron hoke04 = new iron(); 
-            Console.WriteLine("I'm part of {0} team.", hoke04.team);
-            
-
             iron playerHoke = new iron();
+            Console.WriteLine("I'm part of {0} team.", playerHoke.team);
 
             while (repeatGame == true)
             {
@@ -35,20 +29,25 @@ namespace bot
                 }
 
                 newBattleObject.theBattle(playerHoke, ChallengerArray[rnd.Next(0, ChallengerArray.Length)]);
-
+                
                 playerHoke.get_details();
-
+                
                 Console.WriteLine("Do you want another battle? (y/n)");
                 result = Console.ReadLine();
                 if ((result.ToLower())[0] == 'n')
                 {
                     repeatGame = false;
                 }
+                else if ((result.ToLower())[0] == 'y')
+                {
+                    repeatGame = true;
+                }
 
+                /*
                 newBattleObject.requestAChallenger(hoke03);
 
                 newBattleObject.theBattle(hoke03, hoke04);
-
+*/
             }
 
 

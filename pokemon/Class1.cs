@@ -62,7 +62,7 @@ namespace bot
         {
             int attackValue;
             Random rnd = new Random();
-            attackValue = ((attack * speed) / 2) * rnd.Next(0, 2);
+            attackValue = ((attack * speed) / 2) * rnd.Next(1, 2);
 
             return attackValue;
         }
@@ -71,7 +71,7 @@ namespace bot
             int defenceValue;
             Random rnd = new Random();
 
-            defenceValue = (defense * speed) / 10 * rnd.Next(0, 2);
+            defenceValue = (defense * speed) / 10 * rnd.Next(1, 2);
 
             return defenceValue;
         }
