@@ -44,7 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="battleground.cs" />
-    <Compile Include="Class1.cs" />
+    <Compile Include="Hokemon.cs" />
     <Compile Include="pokemon.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
